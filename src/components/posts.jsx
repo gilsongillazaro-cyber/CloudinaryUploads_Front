@@ -60,7 +60,11 @@ function Posts() {
               </li>
             ))
         ) : (
-          <h1>ainda sem arquivos</h1>
+          <div class="sem-uploads">
+  <i class="bi bi-cloud-slash"></i>
+  <h3>Ainda sem uploads</h3>
+  <p>Carrega imagens ou vídeos para começar.</p>
+</div>
         )}
       </ul>
     </section>

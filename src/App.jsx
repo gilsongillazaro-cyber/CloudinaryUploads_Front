@@ -3,7 +3,7 @@ import Posts from "./components/posts";
 import "./App.css";
 import api from "./services/api.js";
 import { toast } from "react-toastify";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { useContext } from "react";
 import { FuncaoContext } from "./Funcao.jsx";
 
@@ -12,6 +12,34 @@ function App() {
   const seleci = useRef();
   const texto = useRef();
   const load = useRef();
+
+  useEffect(() => {
+    function online() {
+      document.title = "cloudinary uploads";
+    }
+
+    function offline() {
+      document.title = "sem internet";
+      toast.warning("sem internet concte-se a red", {
+        position: "top-center",
+      });
+    }
+
+    window.addEventListener("online", online);
+    window.addEventListener("offline", offline);
+
+    if (navigator.onLine) {
+      online();
+    } else {
+      offline();
+    }
+
+    return () => {
+      window.removeEventListener("online", online);
+      window.removeEventListener("offline", offline);
+    };
+  }, []);
+
   const { funcao } = useContext(FuncaoContext);
   const [arquivos, setArquivos] = useState([]);
   const inputArquivo = useRef();

@@ -52,6 +52,21 @@ section {
   overflow-x: auto;
   overflow-y: unset;
 }
+.sem-uploads{
+  width: 80%;
+  padding: 4%;
+  margin: 4% auto;
+  border-radius: 10pt;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(45deg,blue,skyblue);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.sem-uploads i{
+  font-size: 5rem;
+}
 .item ul li {
   min-width: 40%;
   height: 100%;
