@@ -1,0 +1,91 @@
+section {
+  width: 100%;
+  min-height: 50vh;
+  text-align: center;
+  text-transform: capitalize;
+}
+.to {
+  width: 100%;
+}
+.to span {
+  background: linear-gradient(45deg, blue, rgb(0, 183, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#listat {
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.item {
+  height: 500px;
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.item h1 {
+  width: 100%;
+  text-align: center;
+  text-transform: capitalize;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background: linear-gradient(45deg, blue, rgb(0, 183, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.item ul {
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  display: flex;
+  gap: 5px;
+  overflow-x: auto;
+  overflow-y: unset;
+}
+.item ul li {
+  min-width: 40%;
+  height: 100%;
+}
+.item ul li img, .item ul li video {
+  border-radius: 20pt;
+  background: linear-gradient(90deg, #ddd, #f7f7f7, #ddd);
+  background-size: 500% 100%;
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  animation: carregar 1.3s ease infinite;
+}
+@keyframes carregar {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .item ul li {
+    min-width: 60%;
+  }
+}
+@media (max-width: 450px) {
+  .item ul li {
+    min-width: 80%;
+  }
+}
+@media (max-width: 380px) {
+  .item {
+    padding: 10px;
+  }
+}

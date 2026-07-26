@@ -1,0 +1,143 @@
+.App{
+  width: 100%;
+  min-height: 100vh;
+}
+.conteiner{
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.conteiner h1{
+  font-size: 3rem;
+  width: 100%;
+  padding-inline: 4%;
+  text-align: center;
+}
+.conteiner h1 span{
+   background: linear-gradient(45deg, blue, rgb(0, 183, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.conteiner form{
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+}
+.conteiner form input{
+  width: 50%;
+  font-size: 16px;
+  border-radius: 5pt;
+  outline-color: blue;
+  border: 1px solid lightskyblue;
+  padding: 10px;
+  height: 50px;
+}
+.conteiner form div{
+  margin: 10px;
+  width: 50%;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: space-around;
+}
+.conteiner form label{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 50px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  border-radius: 30pt;
+  background: linear-gradient(45deg, blue, rgb(0, 183, 255));
+  transition: 1s;
+}
+.conteiner form label:hover{
+  box-shadow: 0 0 16px blue;
+}
+.conteiner form label input{
+  display: none;
+}
+.conteiner form button{
+   background: linear-gradient(45deg, blue, darkblue);
+   color: white;
+  width: 50%;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  cursor: pointer;
+  font-weight: 900;
+  border-radius: 10pt;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  transition: 1s;
+}
+.conteiner form button:hover{
+  box-shadow: 0 0 16px darkblue;
+}
+.load{
+  animation: load 1s linear infinite;
+  display: none;
+  cursor: no-drop;
+}
+@keyframes load{
+  0%{
+transform: rotate(0deg);
+  }
+  100%{
+transform: rotate(360deg);
+  }
+}
+
+@media(max-width:850px){
+  .conteiner form input{
+    width: 70%;
+  }
+  .conteiner form div{
+    width: 70%;
+  }
+}@media(max-width:650px){
+  .conteiner form input{
+    width: 90%;
+  }
+  .conteiner form div{
+    width: 90%;
+  }
+}@media(max-width:490px){
+  .conteiner h1{
+    font-size: 2rem;
+    padding-inline: 2%;
+  }
+  .conteiner form input{
+    width: 90%;
+  }
+  .conteiner form div{
+    width: 90%;
+  }
+}
+@media(max-width:450px){
+  .conteiner form div{
+    font-size: 13px;
+    padding-inline: 2px;
+  }
+}@media(max-width:310px){
+  .conteiner h1{
+    font-size: 1.5rem;
+    padding-inline: 2%;
+  }
+  .conteiner form div{
+    font-size: 12px;
+  }
+}
