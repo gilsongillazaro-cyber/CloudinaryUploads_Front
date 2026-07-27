@@ -107,7 +107,7 @@ function App() {
               </p>
               <input
                 ref={inputArquivo}
-                type="file"
+                type="file" accept="image/*,video/*"
                 id="foto"
                 multiple
                 onChange={(e) => {
