@@ -72,6 +72,13 @@ function App() {
 `;
       await funcao?.();
     } catch (erro) {
+      titulo.current.value = "";
+      setArquivos([]);
+      inputArquivo.current.value = "";
+      seleci.current.innerHTML = `
+  <i class="bi bi-file-earmark-plus-fill"></i>
+  selecione os arquivos
+`;
       texto.current.style.display = "block";
       load.current.style.display = "none";
       toast.error(erro.response.data.mensagem, {
@@ -107,7 +114,8 @@ function App() {
               </p>
               <input
                 ref={inputArquivo}
-                type="file" accept="image/*,video/*"
+                type="file"
+                accept="image/*,video/*"
                 id="foto"
                 multiple
                 onChange={(e) => {
